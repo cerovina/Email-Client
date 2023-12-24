@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "default": "email-client-nikola-cerovina"
+  },
+  "targets": {
+    "hosting": {
+      "your-target-name": {
+        "hosting": {
+          "site": "email-client-nikola-cerovina"
+        },
+        "firestore": {
+          "rules": "firestore.rules",
+          "indexes": "firestore.indexes.json"
+        },
+        "storage": {
+          "rules": "storage.rules",
+          "rulesFile": "storage.rules"
+        }
+      }
+    }
+  }
+}
