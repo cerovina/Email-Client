@@ -1,20 +1,35 @@
 <template>
   <div id="app">
-    <router-view />
-    <Auth />
+    <SignupForm @onSignupSuccess="handleSignupSuccess" />
   </div>
 </template>
 
 <script>
-import Auth from '@/components/AuthenticationForm.vue';
+import SignupForm from '@/components/SigninForm.vue';
 
 export default {
   components: {
-    Auth,
+    SignupForm,
+  },
+  methods: {
+    handleSignupSuccess() {
+      // Redirect the user to their profile or another route
+      this.$router.push('/profile');
+    },
   },
 };
 </script>
 
 <style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
 </style>
