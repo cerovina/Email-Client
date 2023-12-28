@@ -56,7 +56,7 @@ export default {
         // Get the user from the userCredential
         const user = userCredential.user;
 
-        // Redirect to the user's profile page (you may customize this)
+        // Redirect to the user's profile page
         this.$router.push({ name: 'UserProfile', params: { userId: user.uid } });
       } catch (error) {
         // Handle sign-up errors
