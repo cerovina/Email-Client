@@ -53,6 +53,8 @@ export default {
         this.confirmPassword = '';
         this.passwordError = '';
 
+        alert("Account created!");
+
         // Get the user from the userCredential
         const user = userCredential.user;
 
