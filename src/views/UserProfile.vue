@@ -51,7 +51,20 @@ export default {
   @media screen and (max-width: 767px) {
       .pink {
       color: #E93CAC;
-      margin-right: 47px;
+    }
+
+      .mainContainer {
+      background-color: #110c27;
+      padding: 10px;
+      padding-bottom: 30px;
+      width: 80%;
+      margin: auto;
+      margin-top: -10px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 20px;
     }
   }
 </style>
