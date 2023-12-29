@@ -1,7 +1,7 @@
 <template>
   <div class="mainContainer">
     <h1>WELCOME 🍻</h1>
-    <img class="pic" :src="require(`@/assets/images/cat.png`)" :alt="cat" />
+    <img class="pic" :src="require(`@/assets/images/pinkEmailLogo.png`)" :alt="cat" />
     <div class="info">
       <p><span class="pink">Your Email:</span> {{ $route.query.email }}</p>
       <p><span class="pink">Your fancy ID:</span> {{ $route.params.userId }}</p>
@@ -29,14 +29,14 @@ export default {
   }
   h1 {
     font-size: 50px;
-    margin-bottom: 100px;
     color: white;
   }
 
   img {
     width: 300px;
     padding: none;
-    margin-top: -80px;
+    margin-top: -50px;
+    margin-bottom: -50px;
   }
 
   .pink {
@@ -49,6 +49,11 @@ export default {
   }
 
   @media screen and (max-width: 767px) {
+
+    h1 {
+      font-size: 40px;
+      color: white;
+    }
       .pink {
       color: #E93CAC;
     }
@@ -66,5 +71,12 @@ export default {
     p {
       font-size: 15px;
     }
+
+    img {
+    width: 200px;
+    padding: none;
+    margin-top: -50px;
+    margin-bottom: -40px;
+  }
   }
 </style>
