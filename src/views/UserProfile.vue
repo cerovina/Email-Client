@@ -64,7 +64,7 @@ export default {
     }
 
     p {
-      font-size: 20px;
+      font-size: 15px;
     }
   }
 </style>
