@@ -15,4 +15,4 @@ The first problem was the fact that unique user ID's could be seen in the URL bu
 The second problem took a lot more time to solve as it demanded a complete change of approach to how I have been doing things. The issue was in the unique email of the user not appearing on the screen, after they log in. I tried changing the object in methods in App.vue but, in the end, I found a solution online: instead of using "params" (like I did to display the ID), I opted to use the "query" property in the router to pass additional parameters.
 
 #### Current state of the app
-The user can now sign up and afterwards sign in every time with a unique account, having both their unique email and ID displayed, as confirmation.
+The user can now sign up, creating a unique account, and having both their unique email and ID displayed, as confirmation.
