@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
-import UserProfile from '@/views/UserProfile.vue';
+import UserProfile from '../views/UserProfile.vue';
 
 const routes = [
   {
@@ -9,7 +9,7 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/user/:userId', // Use a dynamic parameter for the user ID
+    path: '/user/:userId', // A dynamic parameter for the user ID
     name: 'UserProfile',
     component: UserProfile,
   },

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <SignupForm @onSignupSuccess="handleSignupSuccess" />
+    <router-view />
+    <SignupForm v-if="showSignupForm" @onSignupSuccess="handleSignupSuccess" />
   </div>
 </template>
 
@@ -11,10 +12,23 @@ export default {
   components: {
     SignupForm,
   },
+  data() {
+    return {
+      showSignupForm: true,
+    };
+  },
   methods: {
-    handleSignupSuccess() {
-      // Redirect the user to their profile or another route
-      this.$router.push('/profile');
+    handleSignupSuccess(user) {
+      console.log('User signed up successfully:', user);
+
+      this.showSignupForm = false;
+
+      // Use query to pass additional parameters
+      this.$router.push({
+        name: 'UserProfile',
+        params: { userId: user.uid },
+        query: { email: user.email }
+      });
     },
   },
 };

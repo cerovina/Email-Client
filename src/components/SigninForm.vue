@@ -31,6 +31,7 @@ export default {
       passwordError: '',
     };
   },
+  // SigninForm.vue
   methods: {
     async handleSignUp() {
       try {
@@ -58,8 +59,9 @@ export default {
         // Get the user from the userCredential
         const user = userCredential.user;
 
-        // Redirect to the user's profile page
-        this.$router.push({ name: 'UserProfile', params: { userId: user.uid } });
+        // Emit the event to notify the parent component (App.vue)
+        this.$emit('onSignupSuccess', user);
+
       } catch (error) {
         // Handle sign-up errors
         this.passwordError = `Error signing up: ${error.message}`;
@@ -70,8 +72,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 h1 {
+  font-size: 50px;
   color: white;
   margin-top: -20px;
 }
