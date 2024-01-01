@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>SIGN UP 🚀</h1>
+    <h1>Sign up</h1>
     <form @submit.prevent="handleSignUp">
       <label>Email:</label>
       <input type="email" required v-model="email">
@@ -81,14 +81,14 @@ h1 {
 form {
   max-width: 330px;
   margin: 35px auto;
-  background-color: #59CBE8;
+  background-color: #111;
   text-align: left;
   padding: 40px;
   border-radius: 10px;
-  border: 10px solid rgb(0, 0, 0);
+  border: 10px solid #9b9b9b;
 }
 label {
-  color: rgb(0, 0, 0);
+  color: white;
   display: inline-block;
   margin: 25px 0 15px;
   font-size: 0.8em;
@@ -115,7 +115,8 @@ input[type="checkbox"] {
 }
 button {
   font-size: 1em;
-  background: #E93CAC;
+  background: #689E3B;
+;
   border: 0;
   padding: 20px 40px;
   margin-top: 40px;
@@ -123,7 +124,8 @@ button {
   border-radius: 20px;
 }
 button:hover {
-  background: #781e58;
+  background: #486e29;
+;
   color: white;
 }
 .submit {

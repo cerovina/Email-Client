@@ -1,10 +1,10 @@
 <template>
   <div class="mainContainer">
-    <h1>WELCOME 🍻</h1>
-    <img class="pic" :src="require(`@/assets/images/pinkEmailLogo.png`)" :alt="cat" />
+    <h1>Welcome to <span class="green">Pear</span>Link</h1>
+    <img class="pic" :src="require(`@/assets/images/plb.png`)" :alt="PearLink" />
     <div class="info">
-      <p><span class="pink">Your Email:</span> {{ $route.query.email }}</p>
-      <p><span class="pink">Your fancy ID:</span> {{ $route.params.userId }}</p>
+      <p><span class="green">Your Email:</span> {{ $route.query.email }}</p>
+      <p><span class="green">Your ID:</span> {{ $route.params.userId }}</p>
     </div>
   </div>
 </template>
@@ -20,27 +20,33 @@ export default {
 
 <style scoped>
   .mainContainer {
-    background-color: #110c27;
+    background-color: #111;
     padding: 10px;
     width: 800px;
     margin: auto;
     margin-top: -10px;
     margin-bottom: 30px;
+    border-radius: 10px;
+    border: 10px solid #9b9b9b;
   }
   h1 {
     font-size: 50px;
     color: white;
   }
 
+  p {
+    color: white;
+  }
+
   img {
-    width: 300px;
-    padding: none;
+    width: 200px;
+    padding: 60px;
     margin-top: -50px;
     margin-bottom: -50px;
   }
 
-  .pink {
-    color: #E93CAC;
+  .green {
+    color:#689E3B;
   }
 
   .info {
@@ -51,15 +57,15 @@ export default {
   @media screen and (max-width: 767px) {
 
     h1 {
-      font-size: 40px;
+      font-size: 30px;
       color: white;
     }
       .pink {
-      color: #E93CAC;
+      color: #689E3B;
     }
 
       .mainContainer {
-      background-color: #110c27;
+      background-color: #111;
       padding: 10px;
       padding-bottom: 30px;
       width: 80%;
@@ -70,10 +76,11 @@ export default {
 
     p {
       font-size: 15px;
+      color: white;
     }
 
     img {
-    width: 200px;
+    width: 150px;
     padding: none;
     margin-top: -50px;
     margin-bottom: -40px;
