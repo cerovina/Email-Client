@@ -16,3 +16,6 @@ The second problem took a lot more time to solve as it demanded a complete chang
 
 #### Current state of the app
 The user can now sign up, creating a unique account, and having both their unique email and ID displayed, as confirmation.
+
+### Update 3: Profile Design
+The user now has a profile which resembles Gmail, although simplified. I added buttons on which I will be working on in the future, adding functionalities on each of them (Create new, Inbox, Sent and Trash). The user now also has an option to add a profile picture which will be displayed over the placeholder square, once added.
