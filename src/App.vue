@@ -18,15 +18,15 @@ export default {
     };
   },
   methods: {
-    handleSignupSuccess(user) {
+        handleSignupSuccess(user) {
       console.log('User signed up successfully:', user);
 
       this.showSignupForm = false;
 
-      // Use query to pass additional parameters
       this.$router.push({
         name: 'UserProfile',
-        query: { email: user.email }
+        params: { userId: user.uid },
+        query: { email: user.email },
       });
     },
   },

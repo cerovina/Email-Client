@@ -34,6 +34,7 @@ export default {
   // SigninForm.vue
   methods: {
     async handleSignUp() {
+      console.log('Handling sign up...');
       try {
         // Check if passwords match
         if (this.password !== this.confirmPassword) {
