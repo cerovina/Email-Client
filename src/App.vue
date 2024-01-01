@@ -26,7 +26,6 @@ export default {
       // Use query to pass additional parameters
       this.$router.push({
         name: 'UserProfile',
-        params: { userId: user.uid },
         query: { email: user.email }
       });
     },

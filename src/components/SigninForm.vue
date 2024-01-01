@@ -116,11 +116,10 @@ input[type="checkbox"] {
 button {
   font-size: 1em;
   background: #689E3B;
-;
   border: 0;
   padding: 20px 40px;
   margin-top: 40px;
-  color: black;
+  color: white;
   border-radius: 20px;
 }
 button:hover {

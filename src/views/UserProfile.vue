@@ -3,9 +3,18 @@
     <div class="header">
       <img class="logo" :src="require(`@/assets/images/plb.png`)" :alt="PearLink" />
       <div class="user-info">
-        <p class="user"><span class="green">User:</span> {{ $route.query.email }}</p>
-        <!--<p><span class="green">Your ID:</span> {{ $route.params.userId }}</p>-->
+        <div class="user">
+          <span class="green">User:</span> {{ $route.query.email }}
+        </div>
       </div>
+    </div>
+    <div class="profile-picture">
+      <div v-if="!previewImage" class="preview-placeholder">
+        Your picture
+      </div>
+      <img v-if="previewImage" :src="previewImage" alt="User Picture" class="uploaded-picture" />
+      <input type="file" id="fileInput" ref="fileInput" @change="handleFileChange" accept="image/*" style="display: none;" />
+      <label for="fileInput" class="upload-label" @click="handleFileUpload">Add a picture</label>
     </div>
     <div class="menu">
       <router-link to="/create">Create new</router-link>
@@ -21,6 +30,24 @@
 
 <script>
 export default {
+  data() {
+    return {
+      previewImage: null,
+    };
+  },
+  methods: {
+    handleFileUpload() {
+      // Trigger the file input
+      this.$refs.fileInput.click();
+    },
+    handleFileChange(event) {
+      const file = event.target.files[0];
+      if (file) {
+        console.log('File uploaded:', file);
+        this.previewImage = URL.createObjectURL(file);
+      }
+    },
+  },
   created() {
     console.log('UserProfile created with route params:', this.$route.params);
     console.log('User email from query:', this.$route.query.email);
@@ -34,10 +61,11 @@ export default {
   padding: 10px;
   width: 800px;
   margin: auto;
-  margin-top: -10px;
-  margin-bottom: 30px;
+  margin-top: -5px;
+  margin-bottom: 200px;
   border-radius: 10px;
   border: 10px solid #9b9b9b;
+  padding-bottom: 100px;
 }
 
 .header {
@@ -52,38 +80,73 @@ export default {
   margin-left: 23px;
 }
 
-.user-info {
-  text-align: right;
-  margin-right: 20px;
-}
-
-h1 {
-  font-size: 50px;
-  color: white;
-}
-
-p {
-  color: white;
-}
-
-.green {
-  color: #689E3B
+.upload-label {
+  margin-left: 600px;
 }
 
 .user {
+  color: white;
+}
+
+.user-info {
+  text-align: right;
   margin-right: 30px;
-  font-size: 20px;
+  margin-top: -50px;
+}
+
+.green {
+  color: #689E3B;
 }
 
 .noEmails {
+  margin-top: 100px;
+}
+
+.profile-picture {
+  margin-top: -20px;
+  margin-right: 10px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture .preview-placeholder {
+  width: 150px;
+  height: 150px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  color: #555;
+  border-radius: 5px;
+  margin-left: 600px;
+  margin-top: -15px;
+}
+
+.profile-picture .uploaded-picture {
+  width: 150px;
+  height: 150px;
+  object-fit: cover; 
+  border-radius: 5px;
+  margin-left: 600px;
+}
+
+.profile-picture label {
+  margin-top: 10px;
+  color: #689E3B;
+  cursor: pointer;
+}
+
+.profile-picture:hover label {
+  text-decoration: underline;
 }
 
 .menu {
   display: grid;
   justify-content: space-around;
   margin-right: 650px;
-  margin-top: 30px;
+  margin-top: -120px;
 }
 
 .menu a {
@@ -92,7 +155,7 @@ p {
   padding: 5px;
   border-radius: 5px;
   background-color: #689E3B;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .menu a:hover {
@@ -105,44 +168,54 @@ p {
   color: white;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 768px) {
   .mainContainer {
-    width: 80%;
-    margin-top: -10px;
-    margin-bottom: 30px;
+    width: 90%;
+    margin: auto;
+    margin-top: -37px;
+    margin-bottom: 100px;
   }
 
-  h1 {
-    font-size: 30px;
-    color: white;
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .logo {
-    width: 80px;
-    margin-top: 5px;
+    margin-top: 30px;
+    margin-right: 300px;
   }
 
   .user-info {
-    font-size: 15px;
-    text-align: right;
+    margin-top: 30px;
+    margin-left: -230px;
   }
 
-  p {
-    font-size: 15px;
-    color: white;
+  .user {
+    display: none;
+  }
+
+  .upload-label {
+    margin-left: 0;
+    margin-left: 300px;
   }
 
   .menu {
-    display: grid;
-    justify-content: space-around;
-}
-
-  .menu a {
-    margin: 5px 0;
+    margin-right: 0;
+    margin-top: 50px;
   }
 
-  .content {
-    font-size: 16px;
+  .menu a {
+    max-width: none;
+  }
+
+  .profile-picture .preview-placeholder,
+  .profile-picture .uploaded-picture {
+    height: 100px;
+    width: 100px;
+    margin-left: 300px;
+    margin-top: -115px;
   }
 }
 </style>
