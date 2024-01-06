@@ -202,7 +202,7 @@ export default {
   }
 
   .menu {
-    margin-right: 250px;
+    margin-right: 200px;
     margin-top: 50px;
   }
 
@@ -214,7 +214,7 @@ export default {
   .profile-picture .uploaded-picture {
     height: 100px;
     width: 100px;
-    margin-left: 200px;
+    margin-left: 210px;
     margin-top: -115px;
   }
 }
