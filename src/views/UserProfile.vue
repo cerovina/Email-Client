@@ -184,7 +184,7 @@ export default {
 
   .logo {
     margin-top: 30px;
-    margin-right: 220px;
+    margin-right: 225px;
   }
 
   .user-info {
