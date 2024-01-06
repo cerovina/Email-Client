@@ -184,7 +184,7 @@ export default {
 
   .logo {
     margin-top: 30px;
-    margin-right: 250px;
+    margin-right: 230px;
   }
 
   .user-info {
@@ -198,7 +198,7 @@ export default {
 
   .upload-label {
     margin-left: 0;
-    margin-left: 200px;
+    margin-left: 220px;
   }
 
   .menu {
@@ -214,7 +214,7 @@ export default {
   .profile-picture .uploaded-picture {
     height: 100px;
     width: 100px;
-    margin-left: 210px;
+    margin-left: 220px;
     margin-top: -115px;
   }
 }
