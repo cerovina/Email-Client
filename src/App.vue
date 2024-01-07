@@ -12,16 +12,15 @@ export default {
   components: {
     SignupForm,
   },
-  data() {
-    return {
-      showSignupForm: true,
-    };
+  computed: {
+    showSignupForm() {
+      // Check if the user is not authenticated to show the signup form
+      return !this.$auth.currentUser;
+    },
   },
   methods: {
-        handleSignupSuccess(user) {
+    handleSignupSuccess(user) {
       console.log('User signed up successfully:', user);
-
-      this.showSignupForm = false;
 
       this.$router.push({
         name: 'UserProfile',

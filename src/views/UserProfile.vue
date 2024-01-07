@@ -17,7 +17,7 @@
       <label for="fileInput" class="upload-label" @click="handleFileUpload">Add a picture</label>
     </div>
     <div class="menu">
-      <router-link to="/create">Create new</router-link>
+      <router-link to="/compose">Compose</router-link>
       <router-link to="/inbox">Inbox</router-link>
       <router-link to="/sent">Sent</router-link>
       <router-link to="/trash">Trash</router-link>
@@ -61,11 +61,8 @@ export default {
   padding: 10px;
   width: 800px;
   margin: auto;
-  margin-top: -5px;
-  margin-bottom: 200px;
   border-radius: 10px;
   border: 10px solid #9b9b9b;
-  padding-bottom: 100px;
 }
 
 .header {

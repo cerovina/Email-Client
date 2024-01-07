@@ -1,6 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import UserProfile from '../views/UserProfile.vue';
+import ComposeEmail from '../components/ComposeEmail.vue';
+import InboxComponent from '../components/InboxComponent.vue';
+import SentComponent from '../components/SentComponent.vue';
+import TrashComponent from '../components/TrashComponent.vue';
 
 const routes = [
   {
@@ -13,6 +17,26 @@ const routes = [
     name: 'UserProfile',
     component: UserProfile,
   },
+  {
+    path: '/compose',
+    name: 'ComposeEmail',
+    component: ComposeEmail,
+  },
+  {
+    path: '/inbox',
+    name: 'InboxComponent',
+    component: InboxComponent,
+  },
+  {
+    path: '/sent',
+    name: 'SentComponent',
+    component: SentComponent,
+  },
+  {
+    path: '/trash',
+    name: 'TrashComponent',
+    component: TrashComponent,
+  }
 ];
 
 const router = createRouter({
