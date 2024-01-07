@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-      <h1>Compose New Email</h1>
+      <h1>Compose New Email (in development...)</h1>
       <form @submit.prevent="sendEmail">
         <label>To:</label>
         <input type="email" required v-model="recipient">
