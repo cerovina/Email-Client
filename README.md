@@ -1,4 +1,6 @@
-# Project Updates
+# Project Updates 🚀
+
+## December 2023 📅
 
 ## Overview
 My biggest project so far which I'm currently working on, using Vue and Firebase. No tutorial. Built from scratch.
@@ -17,5 +19,10 @@ The second problem took a lot more time to solve as it demanded a complete chang
 #### Current state of the app
 The user can now sign up, creating a unique account, and having both their unique email and ID displayed, as confirmation.
 
+## January 2024 📅
+
 ### Update 3: Profile Design
-The user now has a profile which resembles Gmail, although simplified. I added buttons on which I will be working on in the future, adding functionalities to each of them (Create new, Inbox, Sent and Trash). The user now also has an option to add a profile picture which will be displayed over the placeholder square, once added.
+The user now has a profile which resembles Gmail, although simplified. I added buttons on which I will be working on in the future, adding functionalities to each of them (Compose, Inbox, Sent and Trash). The user now also has an option to add a profile picture which will be displayed over the placeholder square, once added. I named the app Pear Link.
+
+### Update 4: Sign Up form bug fixed
+The Sign Up form will no longer reappear after the user refreshes the page. This could have been done with Vuex or local storage (less safe), but I resolved it with Firabase in main.js, using the onAuthStateChanged method to listen for changes in the authentication state. After that I updated App.vue by adding the showSignupForm() and it's logic to check if the user is authenticated (to show or hide the signup form). I have also added the main layout for the main 4 components the email client app will be using.
