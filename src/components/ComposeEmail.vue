@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main">
       <h1>Compose New Email</h1>
       <form @submit.prevent="sendEmail">
         <label>To:</label>
@@ -30,9 +30,9 @@
     methods: {
       sendEmail() {
         // Implement the logic to send the email
-        // You'll need to use Firebase or your backend service for this
-        // You can use the Firebase Cloud Firestore to store email data
-        // After sending the email, you can redirect the user to the Sent folder or show a confirmation message
+        // Use Firebase or your backend service for this
+        // Use the Firebase Cloud Firestore to store email data
+        // After sending the email, redirect the user to the Sent folder or show a confirmation message
         // Clear the form fields after sending the email
       },
     },
@@ -40,6 +40,9 @@
   </script>
   
   <style scoped>
+  .main {
+    margin-bottom: 400px;
+  }
   h1 {
     font-size: 2em;
     margin-bottom: 20px;

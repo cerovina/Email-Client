@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main">
       <h1>Sent</h1>
       <div v-if="emails.length === 0" class="noEmails">No sent emails.</div>
       <div v-else>
@@ -23,6 +23,9 @@
   </script>
   
   <style scoped>
+  .main {
+    margin-bottom: 700px;
+  }
   h1 {
     font-size: 2em;
     margin-bottom: 20px;
