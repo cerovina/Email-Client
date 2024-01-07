@@ -22,4 +22,4 @@ The user can now sign up, creating a unique account, and having both their uniqu
 ## January 2024 📅
 
 ### Update 3: Profile Design
-The user now has a profile which resembles Gmail, although simplified. I added buttons on which I will be working on in the future, adding functionalities to each of them (Compose, Inbox, Sent and Trash). The user now also has an option to add a profile picture which will be displayed over the placeholder square, once added. I named the app Pear Link.
+The user now has a profile which resembles Gmail, although simplified. I added components on which I will be working on in the future, adding functionalities to each of them (Compose, Inbox, Sent and Trash). The user now also has an option to add a profile picture which will be displayed over the placeholder square, once added. I named the app PearLink.
