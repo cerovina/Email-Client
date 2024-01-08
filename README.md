@@ -1,9 +1,10 @@
 # Project Updates 🚀
 
-## December 2023 📅
-
 ## Overview
-My biggest project so far which I'm currently working on, using Vue and Firebase. No tutorial. Built from scratch.
+My biggest project so far which I'm currently working on, using Vue and Firebase. No tutorial. Built from scratch.    
+<br> 
+
+## December 2023 📅
 
 ### Update 1: Sign Up Form
 The Sign Up form is now fully functional. I've implemented a mechanism to prevent users from signing up with the same email and password multiple times.
@@ -17,9 +18,10 @@ The first problem was the fact that unique user ID's could be seen in the URL bu
 The second problem took a lot more time to solve as it demanded a complete change of approach to how I have been doing things. The issue was in the unique email of the user not appearing on the screen, after they log in. I tried changing the object in methods in App.vue but, in the end, I found a solution online: instead of using "params" (like I did to display the ID), I opted to use the "query" property in the router to pass additional parameters.
 
 #### Current state of the app
-The user can now sign up, creating a unique account, and having both their unique email and ID displayed, as confirmation.
+The user can now sign up, creating a unique account, and having both their unique email and ID displayed, as confirmation.  
+<br> 
 
 ## January 2024 📅
 
 ### Update 3: Profile Design
-The user now has a profile which resembles Gmail, although simplified. I added buttons on which I will be working on in the future, adding functionalities to each of them (Compose, Inbox, Sent and Trash). The user now also has an option to add a profile picture which will be displayed over the placeholder square, once added. I named the app Pear Link.
+The user now has a profile which resembles Gmail, although simplified. I added components on which I will be working on in the future, adding functionalities to each of them (Compose, Inbox, Sent and Trash). The user now also has an option to add a profile picture which will be displayed over the placeholder square, once added. I named the app PearLink.
