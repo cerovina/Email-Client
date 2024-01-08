@@ -44,7 +44,15 @@
     color: red;
   }
   .main {
+    background-color: #111;
+    padding: 10px;
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    border-radius: 10px;
+    border: 10px solid #9b9b9b;
     margin-bottom: 400px;
+    padding-bottom: 20px;
   }
   h1 {
     font-size: 2em;
@@ -85,5 +93,12 @@
   .submit {
     text-align: center;
   }
+  @media (max-width: 768px) {
+  .main {
+    width: 90%;
+    margin: auto;
+    margin-top: -37px;
+    margin-bottom: 100px;
+  }
+}
   </style>
-  
