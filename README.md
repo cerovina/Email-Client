@@ -1,9 +1,9 @@
 # Project Updates 🚀
 
-## December 2023 📅
-
 ## Overview
 My biggest project so far which I'm currently working on, using Vue and Firebase. No tutorial. Built from scratch.
+
+## December 2023 📅
 
 ### Update 1: Sign Up Form
 The Sign Up form is now fully functional. I've implemented a mechanism to prevent users from signing up with the same email and password multiple times.
