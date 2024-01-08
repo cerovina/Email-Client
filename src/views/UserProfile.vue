@@ -5,6 +5,8 @@
       <div class="user-info">
         <div class="user">
           <span class="green">User:</span> {{ $route.query.email }}
+          <br>
+          <span class="green small">ID: {{ $route.params.userId }}</span>
         </div>
       </div>
     </div>
@@ -94,6 +96,11 @@ export default {
 
 .green {
   color: #689E3B;
+}
+
+.small {
+  font-size: 9px;
+  font-style: italic;
 }
 
 .noEmails {
