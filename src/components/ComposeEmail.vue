@@ -52,7 +52,6 @@
     border-radius: 10px;
     border: 10px solid #9b9b9b;
     margin-bottom: 400px;
-    padding-bottom: 20px;
   }
   h1 {
     font-size: 2em;
