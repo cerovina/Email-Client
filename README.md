@@ -3,6 +3,7 @@
 ## Overview
 My biggest project so far which I'm currently working on, using Vue and Firebase. No tutorial. Built from scratch.
 
+
 ## December 2023 📅
 
 ### Update 1: Sign Up Form
@@ -18,6 +19,7 @@ The second problem took a lot more time to solve as it demanded a complete chang
 
 #### Current state of the app
 The user can now sign up, creating a unique account, and having both their unique email and ID displayed, as confirmation.
+
 
 ## January 2024 📅
 
