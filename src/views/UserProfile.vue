@@ -105,7 +105,7 @@ export default {
 }
 
 .noEmails {
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .profile-picture {
@@ -223,6 +223,10 @@ export default {
     width: 100px;
     margin-left: 220px;
     margin-top: -115px;
+  }
+
+  .noEmails {
+  margin-top: 45px;
   }
 }
 </style>
