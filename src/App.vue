@@ -1,33 +1,36 @@
 <template>
   <div id="app">
     <router-view />
+    <SigninForm v-if="showSigninForm" @onSigninSuccess="handleSigninSuccess" />
     <SignupForm v-if="showSignupForm" @onSignupSuccess="handleSignupSuccess" />
+    <!-- Link to create an account -->
+    <p class="gotAccount">No account? <router-link class="link" to="/signup">Sign up here!</router-link></p>
   </div>
 </template>
 
 <script>
-import SignupForm from '@/components/SigninForm.vue';
+import SignupForm from '@/components/SignUpForm.vue';
+import SigninForm from '@/components/SignInForm.vue';
 
 export default {
   components: {
-    SignupForm,
+    SigninForm,
+    SignupForm
   },
   data() {
     return {
-      showSignupForm: true,
+      showSigninForm: true,
+      showSignupForm: false,
     };
   },
   methods: {
-        handleSignupSuccess(user) {
+    handleSigninSuccess(user) {
+      console.log('User signed in successfully:', user);
+      this.showSigninForm = false;
+    },
+    handleSignupSuccess(user) {
       console.log('User signed up successfully:', user);
-
       this.showSignupForm = false;
-
-      this.$router.push({
-        name: 'UserProfile',
-        params: { userId: user.uid },
-        query: { email: user.email },
-      });
     },
   },
 };
@@ -41,8 +44,12 @@ export default {
   margin-top: 60px;
 }
 
-h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
+.gotAccount {
+  margin-bottom: 300px;
+  color: white;
+}
+
+.link {
+  color: #689E3B;
 }
 </style>
