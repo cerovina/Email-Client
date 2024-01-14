@@ -3,14 +3,14 @@
     <router-view />
     <SigninForm v-if="showSigninForm" @onSigninSuccess="handleSigninSuccess" />
     <SignupForm v-if="showSignupForm" @onSignupSuccess="handleSignupSuccess" />
-    <!-- Link to create an account -->
+    <!-- Link to create a new account -->
     <p class="gotAccount">No account? <router-link class="link" to="/signup">Sign up here!</router-link></p>
   </div>
 </template>
 
 <script>
 import SignupForm from '@/components/SignUpForm.vue';
-import SigninForm from '@/components/SignInForm.vue';
+import SigninForm from '@/components/SignInForm.vue'; 
 
 export default {
   components: {
