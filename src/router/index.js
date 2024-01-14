@@ -5,7 +5,7 @@ import ComposeEmail from '../components/ComposeEmail.vue';
 import InboxComponent from '../components/InboxComponent.vue';
 import SentComponent from '../components/SentComponent.vue';
 import TrashComponent from '../components/TrashComponent.vue';
-import SignUpForm from '@/components/SignUpForm.vue';
+import SignUpForm from '@/components/forms/SignUpForm.vue';
 
 const routes = [
   {

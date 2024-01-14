@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import SignupForm from '@/components/SignUpForm.vue';
-import SigninForm from '@/components/SignInForm.vue'; 
+import SignupForm from '@/components/forms/SignUpForm.vue';
+import SigninForm from '@/components/forms/SignInForm.vue'; 
 
 export default {
   components: {
