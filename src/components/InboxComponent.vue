@@ -16,7 +16,7 @@
   export default {
     data() {
       return {
-        emails: [], // Fetch and populate this array with emails from Firebase or your backend
+        emails: [], // Fetch and populate this array with emails from Firebase
       };
     },
   };

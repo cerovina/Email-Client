@@ -92,7 +92,7 @@ export default {
 .user-info {
   text-align: right;
   margin-right: 30px;
-  margin-top: -50px;
+  margin-top: -40px;
 }
 
 .green {
@@ -109,7 +109,7 @@ export default {
 }
 
 .profile-picture {
-  margin-top: -20px;
+  margin-top: -15px;
   margin-right: 10px;
   font-size: 20px;
   display: flex;
@@ -136,6 +136,7 @@ export default {
   object-fit: cover; 
   border-radius: 5px;
   margin-left: 600px;
+  margin-top: -15px;
 }
 
 .profile-picture label {
