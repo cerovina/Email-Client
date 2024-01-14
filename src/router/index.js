@@ -5,7 +5,6 @@ import ComposeEmail from '../components/ComposeEmail.vue';
 import InboxComponent from '../components/InboxComponent.vue';
 import SentComponent from '../components/SentComponent.vue';
 import TrashComponent from '../components/TrashComponent.vue';
-import SignInForm from '@/components/SignInForm.vue';
 import SignUpForm from '@/components/SignUpForm.vue';
 
 const routes = [
@@ -39,14 +38,11 @@ const routes = [
     name: 'TrashComponent',
     component: TrashComponent,
   },
-  { path: '/',
-    name: 'SignIn',
-    component: SignInForm
-  },
   { path: '/signup',
     name: 'SignUp',
     component: SignUpForm
    },
+
 ];
 
 const router = createRouter({
