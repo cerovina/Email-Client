@@ -30,8 +30,7 @@ The user now has a profile which resembles Gmail, although simplified. I added c
 Before tackling the main components, I decided to come back and revisit the authentication part of my app. I didn't want to proceed further until I have a polished start. The user can now not only sign up but also keep the profile and sign in again. This was not possible until now as I didn't have the sign in component which is now appearing first by default. The user can also create an account if they don't have one by clicking the link under the form. The form also recognizes if the user doesn't have an account, with the Firebase feature `signInWithEmailAndPassword` working in the background.
 
 #### A bigger problem I encountered
-I had a bigger problem which I couldn't find a solution for online but I managed to find my way around it. When put together in the components section in App.vue, the sign in and sign up form didn't redirect the user to UserProfile.vue. I'm still not entirely sure what caused it but I believe that there was a conflict in the routing, as the moment I removed the `this.$router.push` from App.vue and gave it to both of the components individually, both of them began doing their job - redirecting the user to their profile.
-
+I had a bigger problem which I couldn't find a solution for online but I managed to find my way around it. When put together in the components section in App.vue, the sign in and sign up form didn't redirect the user to UserProfile.vue. I'm still not entirely sure what caused it but I believe that there was a conflict in the routing, as the moment I removed the `this.$router.push` from App.vue and gave it to both of the components individually, both of them began doing their job - redirecting the user to their profile.  
 
 ## February 2024 📅  
 
