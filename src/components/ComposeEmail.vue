@@ -1,5 +1,5 @@
 <template>
-  <div class="mainContainer">
+  <div>
     <h1>Compose Email</h1>
     <form @submit.prevent="sendEmail">
       <label for="recipient">Recipient:</label>
@@ -57,6 +57,7 @@ export default {
           subject: this.subject,
           message: this.message,
           timestamp: serverTimestamp(),
+          userId: user.uid,
         });
 
         this.recipient = '';
@@ -64,7 +65,7 @@ export default {
         this.message = '';
 
         alert('Email sent!');
-        this.$router.push('/sent'); // Redirect to the SentComponent
+        this.$router.push('/sent');
       } catch (error) {
         console.error('Error sending email:', error.message);
       }
@@ -144,6 +145,9 @@ export default {
     margin: auto;
     margin-top: -37px;
     margin-bottom: 100px;
+  }
+  button {
+    margin-bottom: 500px;
   }
 }
   </style>

@@ -4,17 +4,18 @@
     <div v-if="emails.length === 0" class="noEmails">No sent emails.</div>
     <div v-else>
       <div v-for="email in emails" :key="email.id" class="email">
-        <div class="recipient"><span class="green">Recepient:</span> {{ email.recipient }}</div>
-        <div class="subject"><span class="green">Subject:</span> {{ email.subject }}</div>
-        <div class="message"><span class="green">Message:</span> {{ email.message }}</div>
+        <div class="recipient"><span class="green">Recepient: </span>{{ email.recipient }}</div>
+        <div class="subject"><span class="green">Subject: </span>{{ email.subject }}</div>
+        <div class="message"><span class="green">Message: </span>{{ email.message }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '@/components/firebase.js';
+import { auth } from '@/components/firebase.js';
 
 export default {
   data() {
@@ -23,12 +24,17 @@ export default {
     };
   },
   async created() {
-    await this.fetchSentEmails();
+    const user = auth.currentUser;
+
+    if (user) {
+      await this.fetchSentEmails(user.uid);
+    }
   },
   methods: {
-    async fetchSentEmails() {
+    async fetchSentEmails(userId) {
       const messagesCollection = collection(db, 'messages');
-      const querySnapshot = await getDocs(messagesCollection);
+      const q = query(messagesCollection, where('userId', '==', userId));
+      const querySnapshot = await getDocs(q);
       this.emails = querySnapshot.docs.map((doc) => doc.data());
     },
   },
@@ -38,18 +44,15 @@ export default {
   
   <style scoped>
   .main {
-    background-color: #111;
     padding: 10px;
     width: 800px;
     height: 500px;
     margin: auto;
-    border-radius: 10px;
-    border: 10px solid #9b9b9b;
     margin-bottom: 700px;
   }
   h1 {
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin-top: 10px;
     color: white;
   }
@@ -65,9 +68,10 @@ export default {
     border: 1px solid #ddd;
     padding: 10px;
     margin-bottom: 10px;
+    border-radius: 10px;
+    border: 10px solid #9b9b9b;
   }
   .recipient {
-    font-weight: bold;
     color: white;
   }
   .subject {
@@ -81,7 +85,7 @@ export default {
     width: 90%;
     margin: auto;
     margin-top: -37px;
-    margin-bottom: 100px;
+    margin-bottom: 500px;
   }
 }
   </style>
