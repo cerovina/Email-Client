@@ -1,6 +1,8 @@
 // Import the required Firebase services
 import { initializeApp } from 'firebase/app';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
 
 // Firebase config object
 const firebaseConfig = {
@@ -16,11 +18,14 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+// Get Firestore and Storage
+const db = getFirestore(app);
+const storage = getStorage(app);
+
 // Get the 'auth' object
 const auth = getAuth(app);
 
-// Export the 'auth' object and the 'createUserWithEmailAndPassword' function
-export { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword };
+// Export the 'auth' object and other functions
+export { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, db, storage };
 
 export default app;
-

@@ -43,7 +43,7 @@ export default {
       this.$refs.fileInput.click();
     },
     handleFileChange(event) {
-      const file = event.target.files[0];
+      const file = event?.target?.files?.[0]; // Use optional chaining to avoid errors
       if (file) {
         console.log('File uploaded:', file);
         this.previewImage = URL.createObjectURL(file);
