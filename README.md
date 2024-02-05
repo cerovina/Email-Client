@@ -31,6 +31,7 @@ Before tackling the main components, I decided to come back and revisit the auth
 
 #### A bigger problem I encountered
 I had a bigger problem which I couldn't find a solution for online but I managed to find my way around it. When put together in the components section in App.vue, the sign in and sign up form didn't redirect the user to UserProfile.vue. I'm still not entirely sure what caused it but I believe that there was a conflict in the routing, as the moment I removed the `this.$router.push` from App.vue and gave it to both of the components individually, both of them began doing their job - redirecting the user to their profile.  
+<br>  
 
 ## February 2024 📅  
 
