@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mainContainer">
     <h1>Compose Email</h1>
     <form @submit.prevent="sendEmail">
       <label for="recipient">Recipient:</label>
