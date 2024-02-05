@@ -66,7 +66,7 @@ export default {
   margin: auto;
   border-radius: 10px;
   border: 10px solid #9b9b9b;
-  margin-bottom: 200px;
+  margin-bottom: 500px;
 }
 
 .header {
@@ -180,7 +180,7 @@ export default {
     width: 90%;
     margin: auto;
     margin-top: -37px;
-    margin-bottom: 100px;
+    margin-bottom: 500px;
   }
 
   .header {
