@@ -83,21 +83,9 @@ export default {
   margin: auto;
   border-radius: 10px;
   border: 10px solid #9b9b9b;
-  margin-bottom: 200px;
 }
-
   .red {
     color: red;
-  }
-  .main {
-    background-color: #111;
-    padding: 10px;
-    width: 800px;
-    height: 500px;
-    margin: auto;
-    border-radius: 10px;
-    border: 10px solid #9b9b9b;
-    margin-bottom: 400px;
   }
   h1 {
     font-size: 2em;
@@ -131,7 +119,6 @@ export default {
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 500px;
   }
   button:hover {
     background: #486e29;

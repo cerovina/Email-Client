@@ -4,7 +4,7 @@
     <SigninForm v-if="showSigninForm" @onSigninSuccess="handleSigninSuccess" />
     <SignupForm v-if="showSignupForm" @onSignupSuccess="handleSignupSuccess" />
     <!-- Link to create a new account -->
-    <p class="gotAccount">No account? <router-link class="link" to="/signup">Sign up here!</router-link></p>
+    <p class="gotAccount" v-if="showSigninForm">No account? <router-link class="link" to="/signup">Sign up here!</router-link></p>
   </div>
 </template>
 
@@ -19,7 +19,6 @@ export default {
   },
   data() {
     return {
-      showSigninForm: true,
       showSignupForm: false,
     };
   },
@@ -31,6 +30,17 @@ export default {
     handleSignupSuccess(user) {
       console.log('User signed up successfully:', user);
       this.showSignupForm = false;
+    },
+  },
+  computed: {
+    showSigninForm() {
+      // Check if the current route is not a wrong page and, if so, hide the Sign in form
+      return this.$route.name !== 'UserProfile' &&
+             this.$route.path !== "/compose" &&
+             this.$route.path !== "/inbox" &&
+             this.$route.path !== "/sent" &&
+             this.$route.path !== "/trash" &&
+             this.$route.path !== "/signup";
     },
   },
 };

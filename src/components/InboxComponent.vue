@@ -31,7 +31,6 @@
     margin: auto;
     border-radius: 10px;
     border: 10px solid #9b9b9b;
-    margin-bottom: 700px;
   }
   h1 {
     font-size: 2em;
