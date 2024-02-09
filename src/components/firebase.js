@@ -6,13 +6,13 @@ import { getStorage } from 'firebase/storage';
 
 // Firebase config object
 const firebaseConfig = {
-  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
-  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.VUE_APP_FIREBASE_APP_ID,
-  measurementId: process.env.VUE_APP_FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyAzqaAQ9rKf3N7IqFO4dzxzPzuAq4ZKxNI",
+  authDomain: "email-client-nikola-cerovina.firebaseapp.com",
+  projectId: "email-client-nikola-cerovina",
+  storageBucket: "email-client-nikola-cerovina.appspot.com",
+  messagingSenderId: "137188675381",
+  appId: "1:137188675381:web:0a185a9d5b48ddbfd3867c",
+  measurementId: "G-8DJRS5PTNX"
 };
 
 // Initialize Firebase
