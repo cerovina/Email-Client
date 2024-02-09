@@ -1,10 +1,10 @@
 <template>
   <div class="main">
-    <h1>Sent</h1>
+    <h1>SENT</h1>
     <div v-if="emails.length === 0" class="noEmails">No sent emails.</div>
     <div v-else>
       <div v-for="email in emails" :key="email.id" class="email">
-        <div class="recipient"><span class="green">Recepient: </span>{{ email.recipient }}</div>
+        <div class="recipient"><span class="brown">Recepient: </span>{{ email.recipient }}</div>
         <div class="subject"><span class="green">Subject: </span>{{ email.subject }}</div>
         <div class="message"><span class="green">Message: </span>{{ email.message }}</div>
       </div>
@@ -41,8 +41,11 @@ export default {
 };
 </script>
 
-  
   <style scoped>
+  @font-face {
+  font-family: 'Electrolize';
+  src: url('~@/assets/fonts/Electrolize-Regular.ttf') format('truetype');
+}
   .main {
     padding: 10px;
     width: 800px;
@@ -51,13 +54,18 @@ export default {
     margin-bottom: 700px;
   }
   h1 {
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 40px;
-    margin-top: 10px;
+    margin-top: -20px;
     color: white;
+    font-family: "Electrolize";
+    border-radius: 10px;
   }
   .green {
     color: #689E3B;
+  }
+  .brown {
+    color: #828A37
   }
   .noEmails {
     font-size: 1.2em;
@@ -70,15 +78,20 @@ export default {
     margin-bottom: 10px;
     border-radius: 10px;
     border: 10px solid #9b9b9b;
+    font-family: "Electrolize";
+    background-color: #111;
   }
   .recipient {
     color: white;
+    font-family: "Electrolize";
   }
   .subject {
     color: white;
+    font-family: "Electrolize";
   }
   .message  {
     color: white;
+    font-family: "Electrolize";
   }
   @media (max-width: 768px) {
   .main {

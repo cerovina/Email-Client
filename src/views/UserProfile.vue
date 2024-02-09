@@ -1,7 +1,7 @@
 <template>
   <div class="mainContainer">
     <div class="header">
-      <img class="logo" :src="require(`@/assets/images/plb.png`)" :alt="PearLink" />
+      <img class="logo" :src="require(`@/assets/images/pearLinkLogo123.png`)" :alt="PearLink" />
       <div class="user-info">
         <div class="user">
           <span class="green">User:</span> {{ $route.query.email }}
@@ -23,9 +23,6 @@
       <router-link to="/inbox">Inbox</router-link>
       <router-link to="/sent">Sent</router-link>
       <router-link to="/trash">Trash</router-link>
-    </div>
-    <div class="content">
-      <p class="noEmails">No emails yet!</p>
     </div>
   </div>
 </template>
@@ -58,6 +55,11 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: 'Electrolize';
+  src: url('~@/assets/fonts/Electrolize-Regular.ttf') format('truetype');
+}
+
 .mainContainer {
   background-color: #111;
   padding: 10px;
@@ -75,9 +77,10 @@ export default {
 }
 
 .logo {
-  width: 100px;
-  margin-top: 20px;
-  margin-left: 23px;
+  width: 150px;
+  margin-top: 5px;
+  margin-left: 25px;
+  padding: none;
 }
 
 .upload-label {
@@ -86,6 +89,7 @@ export default {
 
 .user {
   color: white;
+  font-family: "Electrolize";
 }
 
 .user-info {
@@ -95,16 +99,15 @@ export default {
 }
 
 .green {
-  color: #689E3B;
+  color: #26A95E;
+  font-family: "Electrolize";
 }
 
 .small {
   font-size: 9px;
   font-style: italic;
-}
-
-.noEmails {
-  margin-top: 70px;
+  color: #828A37;
+  font-family: "Electrolize";
 }
 
 .profile-picture {
@@ -114,6 +117,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Electrolize";
 }
 
 .profile-picture .preview-placeholder {
@@ -127,6 +131,7 @@ export default {
   border-radius: 5px;
   margin-left: 600px;
   margin-top: -15px;
+  font-family: "Electrolize";
 }
 
 .profile-picture .uploaded-picture {
@@ -140,7 +145,7 @@ export default {
 
 .profile-picture label {
   margin-top: 10px;
-  color: #689E3B;
+  color: #828A37;
   cursor: pointer;
 }
 
@@ -151,27 +156,22 @@ export default {
 .menu {
   display: grid;
   justify-content: space-around;
-  margin-right: 650px;
+  margin-right: 600px;
   margin-top: -120px;
 }
 
 .menu a {
   text-decoration: none;
   color: white;
-  padding: 5px;
+  padding: 20px;
   border-radius: 5px;
-  background-color: #689E3B;
+  background-color: #26A95E;
   margin-bottom: 15px;
+  font-family: "Electrolize";
 }
 
 .menu a:hover {
-  background-color: #53762E;
-}
-
-.content {
-  text-align: center;
-  font-size: 20px;
-  color: white;
+  background-color: #828A37
 }
 
 @media (max-width: 768px) {

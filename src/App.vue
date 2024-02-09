@@ -60,6 +60,6 @@ export default {
 }
 
 .link {
-  color: #689E3B;
+  color: #828A37;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="mainContainer">
-    <h1>Compose Email</h1>
+    <h1>COMPOSE</h1>
     <form @submit.prevent="sendEmail">
       <label for="recipient">Recipient:</label>
       <input v-model="recipient" type="email" id="recipient" required />
@@ -75,6 +75,10 @@ export default {
 </script>
   
   <style scoped>
+  @font-face {
+  font-family: 'Electrolize';
+  src: url('~@/assets/fonts/Electrolize-Regular.ttf') format('truetype');
+}
   .mainContainer {
   background-color: #111;
   padding: 10px;
@@ -88,9 +92,10 @@ export default {
     color: red;
   }
   h1 {
-    font-size: 2em;
+    font-size: 3em;
     margin-bottom: 20px;
     color: white;
+    font-family: "Electrolize";
   }
   form {
     max-width: 500px;
@@ -102,6 +107,7 @@ export default {
     font-size: 1em;
     font-weight: bold;
     color: white;
+    font-family: "Electrolize";
   }
   input,
   textarea {
@@ -113,15 +119,16 @@ export default {
   }
   button {
     font-size: 1em;
-    background: #689E3B;
+    background: #26A95E;
     border: 0;
     padding: 10px 20px;
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    font-family: "Electrolize";
   }
   button:hover {
-    background: #486e29;
+    background: #828A37;
   }
   .submit {
     text-align: center;

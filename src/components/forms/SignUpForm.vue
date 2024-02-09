@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Sign up</h1>
+    <h1>SIGN UP</h1>
     <form @submit.prevent="handleSignUp">
       <label>Email:</label>
       <input type="email" required v-model="email">
@@ -13,7 +13,7 @@
       <div v-if="passwordError" class="error">{{ passwordError }}</div>
 
       <div class="submit">
-        <button>Sign up</button>
+        <button>SIGN UP</button>
       </div>
     </form>
   </div>
@@ -80,10 +80,15 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+  font-family: 'Electrolize';
+  src: url('~@/assets/fonts/Electrolize-Regular.ttf') format('truetype');
+}
 h1 {
   font-size: 50px;
   color: white;
   margin-top: -20px;
+  font-family: "Electrolize";
 }
 form {
   max-width: 330px;
@@ -94,6 +99,7 @@ form {
   border-radius: 10px;
   border: 10px solid #9b9b9b;
   margin-bottom: 300px;
+  font-family: "Electrolize";
 }
 label {
   color: white;
@@ -103,6 +109,7 @@ label {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
+  font-family: "Electrolize";
 }
 input,
 select {
@@ -116,15 +123,16 @@ select {
 }
 button {
   font-size: 1em;
-  background: #689E3B;
+  background:  #26A95E;
   border: 0;
   padding: 20px 40px;
   margin-top: 40px;
   color: white;
   border-radius: 20px;
+  font-family: "Electrolize";
 }
 button:hover {
-  background: #486e29;
+  background: #828A37;
   color: white;
 }
 .submit {

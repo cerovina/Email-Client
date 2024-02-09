@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-      <h1>Inbox</h1>
+      <h1>INBOX</h1>
       <div v-if="emails.length === 0" class="noEmails">No emails in the inbox.</div>
       <div v-else>
         <div v-for="email in emails" :key="email.id" class="email">
@@ -23,24 +23,29 @@
   </script>
   
   <style scoped>
+    @font-face {
+  font-family: 'Electrolize';
+  src: url('~@/assets/fonts/Electrolize-Regular.ttf') format('truetype');
+}
   .main {
-    background-color: #111;
     padding: 10px;
     width: 800px;
     height: 500px;
     margin: auto;
     border-radius: 10px;
-    border: 10px solid #9b9b9b;
   }
   h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 3em;
+    margin-bottom: 40px;
+    margin-top: -20px;
     color: white;
+    font-family: "Electrolize";
   }
   .noEmails {
     font-size: 1.2em;
     margin-top: 20px;
     color: white;
+    font-family: "Electrolize";
   }
   .email {
     border: 1px solid #ddd;
