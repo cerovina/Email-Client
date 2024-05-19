@@ -4,9 +4,9 @@
     <div v-if="emails.length === 0" class="noEmails">No emails in the inbox.</div>
     <div v-else>
       <div v-for="email in emails" :key="email.id" class="email">
-        <div class="sender">{{ email.sender }}</div>
-        <div class="subject">{{ email.subject }}</div>
-        <div class="message">{{ email.message }}</div>
+        <div class="sender"><span class="brown">From: </span>{{ email.sender }}</div>
+        <div class="subject"><span class="green">Subject: </span>{{ email.subject }}</div>
+        <div class="message"><span class="green">Message: </span>{{ email.message }}</div>
       </div>
     </div>
   </div>
@@ -70,17 +70,30 @@ h1 {
   border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 10px;
-}
+  border-radius: 10px;
+  border: 10px solid #9b9b9b;
+  font-family: "Electrolize";
+  background-color: #111;
+  }
 .sender {
   font-weight: bold;
   color: white;
+  font-family: "Electrolize";
 }
 .subject {
   color: white;
+  font-family: "Electrolize";
 }
 .message {
   color: white;
+  font-family: "Electrolize";
 }
+.green {
+    color: #689E3B;
+  }
+.brown {
+    color: #828A37
+  }
 @media (max-width: 768px) {
 .main {
   width: 90%;
