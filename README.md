@@ -40,3 +40,8 @@ The users can now send emails to each other! The biggest part of the app has bee
 
 #### Database manipulation
 I have encountered many issues since the previous update but the biggest one was the authorization. I realized I had to go to my Firebase console and update the "Rules" so that the users are allowed to send messages to each other. Also, I had to learn how to add data - collections, documents and other fields, and how to manipulate them inside of my Vue components.
+
+## May 2024 📅
+
+### Update 6: Inbox is functional - the app's purpose is complete 🍻
+The user can now see the received emails in the inbox, allowing the users to communicate each other. The app's main purpose is complete. I did this by adding an async function which fetches emails where the recipient matches the current user's email.
