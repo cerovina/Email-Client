@@ -22,7 +22,6 @@
       <router-link to="/compose">Compose</router-link>
       <router-link to="/inbox">Inbox</router-link>
       <router-link to="/sent">Sent</router-link>
-      <router-link to="/trash">Trash</router-link>
     </div>
   </div>
 </template>
@@ -163,7 +162,7 @@ export default {
 .menu a {
   text-decoration: none;
   color: white;
-  padding: 20px;
+  padding: 32px;
   border-radius: 5px;
   background-color: #26A95E;
   margin-bottom: 15px;

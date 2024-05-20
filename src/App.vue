@@ -39,7 +39,6 @@ export default {
              this.$route.path !== "/compose" &&
              this.$route.path !== "/inbox" &&
              this.$route.path !== "/sent" &&
-             this.$route.path !== "/trash" &&
              this.$route.path !== "/signup";
     },
   },
