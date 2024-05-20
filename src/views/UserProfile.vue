@@ -213,6 +213,7 @@ export default {
 
   .menu a {
     max-width: none;
+    padding: 10px;
   }
 
   .profile-picture .preview-placeholder,
