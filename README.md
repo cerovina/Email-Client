@@ -45,3 +45,6 @@ I have encountered many issues since the previous update but the biggest one was
 
 ### Update 6: Inbox is functional - the app's purpose is complete 🍻
 The user can now see the received emails in the inbox, allowing them to communicate with each other. The app's main purpose is complete. I did this by adding an async function which fetches emails where the recipient matches the current user's email.
+
+### Update 7: Emails can be deleted
+The emails can now be removed from both the Inbox and the Sent Component.
