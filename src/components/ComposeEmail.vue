@@ -138,13 +138,9 @@ export default {
     width: 90%;
     margin: auto;
     margin-top: -37px;
-    margin-bottom: 100px;
   }
   .mainContainer {
     width:90%;
-  }
-  button {
-    margin-bottom: 500px;
   }
 }
   </style>
