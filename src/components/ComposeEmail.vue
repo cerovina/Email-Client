@@ -141,7 +141,7 @@ export default {
     margin-bottom: 100px;
   }
   .mainContainer {
-    width: 75%;
+    width:90%;
   }
   button {
     margin-bottom: 500px;
