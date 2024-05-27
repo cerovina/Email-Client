@@ -188,7 +188,6 @@ export default {
   }
 
   .logo {
-    margin-top: 30px;
     margin-right: 225px;
   }
 
@@ -221,7 +220,7 @@ export default {
     height: 100px;
     width: 100px;
     margin-left: 220px;
-    margin-top: -115px;
+    margin-top: -135px;
   }
 
   .noEmails {
