@@ -177,7 +177,7 @@ export default {
   .mainContainer {
     width: 90%;
     margin: auto;
-    margin-top: -37px;
+    margin-top: -45px;
   }
 
   .header {

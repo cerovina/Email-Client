@@ -141,6 +141,7 @@ export default {
   }
   .mainContainer {
     width:90%;
+    margin-top: -45px;
   }
 }
   </style>
