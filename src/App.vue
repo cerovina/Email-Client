@@ -54,7 +54,6 @@ export default {
 }
 
 .gotAccount {
-  margin-bottom: 300px;
   color: white;
 }
 

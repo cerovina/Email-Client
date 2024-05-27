@@ -98,7 +98,6 @@ form {
   padding: 40px;
   border-radius: 10px;
   border: 10px solid #9b9b9b;
-  margin-bottom: 300px;
   font-family: "Electrolize";
 }
 label {
