@@ -189,6 +189,7 @@ export default {
 
   .logo {
     margin-right: 225px;
+    margin-top: -10px;
   }
 
   .user-info {
@@ -212,7 +213,8 @@ export default {
 
   .menu a {
     max-width: none;
-    padding: 10px;
+    padding: 27px;
+    margin-bottom: 15px;
   }
 
   .profile-picture .preview-placeholder,
@@ -220,7 +222,7 @@ export default {
     height: 100px;
     width: 100px;
     margin-left: 220px;
-    margin-top: -135px;
+    margin-top: -140px;
   }
 
   .noEmails {
