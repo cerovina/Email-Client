@@ -178,7 +178,6 @@ export default {
     width: 90%;
     margin: auto;
     margin-top: -37px;
-    margin-bottom: 500px;
   }
 
   .header {
