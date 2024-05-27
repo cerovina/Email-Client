@@ -122,7 +122,7 @@ h1 {
   .main {
     width: 90%;
     margin: auto;
-    margin-top: -37px;
+    margin-top: -45px;
   }
 }
 </style>
