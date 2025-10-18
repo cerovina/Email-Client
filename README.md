@@ -1,7 +1,7 @@
 # Project Updates 🚀
 
 ## Overview
-My biggest project so far which I'm currently working on, using Vue and Firebase. No tutorial. Built from scratch.    
+My biggest project, made with Vue and Firebase. No tutorial. Built from scratch.    
 <br> 
 
 ## December 2023 📅
